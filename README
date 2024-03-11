@@ -1,0 +1,16 @@
+test2/
+|-- libray/
+|   |-- point/
+|   |   |-- point.cpp
+|   |   |-- point.h
+|   |-- circle/
+|   |   |-- circle.cpp
+|   |   |-- circle.h
+|-- libray2/
+|   |-- req/
+|   |   |-- req.cpp
+|   |   |-- req.h
+|-- main.cpp
+|-- main1.cpp
+
+make cmd: mingw32-make run
