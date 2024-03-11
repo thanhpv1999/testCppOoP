@@ -17,7 +17,7 @@ EXECUTABLE = app
 CC ?= gcc
 CXX = g++
 CXXFLAGS = -std=c++17 -Os -ffunction-sections -fdata-sections -Wno-unused-result -Wno-deprecated-declarations
-CFLAGS = -Wno-unused-function -fno-integrated-as -fstrict-aliasing -fPIC -Os -ffunction-sections -fdata-sections
+CFLAGS =
 
 # Linker options --------------------------------------------------------------
 LINKEDLIBS += -lmosquitto

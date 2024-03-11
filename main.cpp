@@ -10,7 +10,6 @@
 using namespace std;
 
 int main(){
-    cout << "Hello ubuntuDev2:" << endl;
     cout << "Hello van:" << endl;
     cout << string(VERSION) << endl;
     cout << "Hello Thanh:" << endl;
