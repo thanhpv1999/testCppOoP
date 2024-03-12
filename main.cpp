@@ -4,28 +4,36 @@
 #include "./library/circle/circle.h"
 #include "./library2/req/req.h"
 #include "./library/squa/squa.h"
+#include "./library/linkedList/linkedList.h"
 
 #define VERSION "1.0.2"
 #define TAG "main"
 using namespace std;
 
 int main(){
-    cout << "Hello main:" << endl;
-    cout << string(VERSION) << endl;
-    point *P_Ptr, P(3.5, 5.3);
-    circle *C_Ptr, C(5.5, 4, 7.7);
+    cout << "Hello winDev:" << endl;
 
-    cout << "Thanh draw------------------------->" << endl;
-    cout <<"Point = "<< P << endl;
-    cout << C << endl;
-    cout << "Thanh draw------------------------->" << endl;
+    LinkedList list;
 
-    P_Ptr = &C;
-    C_Ptr = dynamic_cast<circle *>(P_Ptr);
+    list.append(1);
+    list.prepend(0);
+    list.append(2);
+    list.insertAfter(list.search(1), 1);
+    list.insertAfter(list.search(2), 1);
 
-    int *a = new int;
-    cout << "thanh: " << a << endl;
-    delete a;
+    std::cout << "Danh sach sau khi them: ";
+    list.printList();
+
+    list.remove(1);  // Xóa một node với giá trị 1
+
+    std::cout << "Danh sach sau khi xoa: ";
+    list.printList();
+
+    // Clear the list
+    list.clear();
+    std::cout << "Danh sach sau khi xoa toan bo: ";
+    list.printList();
+
 
     return 0;
 }
