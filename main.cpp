@@ -11,6 +11,7 @@ using namespace std;
 
 int main(){
     cout << "Hello winDev:" << endl;
+    cout << "Hello Thanh:" << endl;
     cout << string(VERSION) << endl;
     point *P_Ptr, P(3.5, 5.3);
     circle *C_Ptr, C(5.5, 4, 7.7);
