@@ -13,4 +13,5 @@ test2/
 |-- main.cpp
 |-- main1.cpp
 
-make cmd: mingw32-make run
+make cmd: mingw32-make run (for win)
+make cmd: make run (for ubuntu)

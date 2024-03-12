@@ -26,7 +26,6 @@ int main(){
     int *a = new int;
     cout << "thanh: " << a << endl;
     delete a;
-    cout << "thanh: " << a << endl;
 
     return 0;
 }
