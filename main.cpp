@@ -10,30 +10,28 @@
 #define TAG "main"
 using namespace std;
 
+struct Example {
+    char a;
+    int b;
+    char c;
+};
+
+uint8_t arr[12] = {0,1,2,3,4,5,6,7,8,9,10,11};
+
 int main(){
     cout << "Hello winDev:" << endl;
 
-    LinkedList list;
+    Example ex;
+    // cout << "Kich thuoc cua struct Example: " << sizeof(ex) << " byte" << endl;
+    // // In ra địa chỉ của các thành viên của struct
+    // cout << "Dia chi cua bien a: " << (void*)&ex.a << endl;
+    // cout << "Dia chi cua bien b: " << (void*)&ex.c << endl;
+    // cout << "Dia chi cua bien c: " << (void*)&ex.b << endl;
 
-    list.append(1);
-    list.prepend(0);
-    list.append(2);
-    list.insertAfter(list.search(1), 1);
-    list.insertAfter(list.search(2), 1);
-
-    std::cout << "Danh sach sau khi them: ";
-    list.printList();
-
-    list.remove(1);  // Xóa một node với giá trị 1
-
-    std::cout << "Danh sach sau khi xoa: ";
-    list.printList();
-
-    // Clear the list
-    list.clear();
-    std::cout << "Danh sach sau khi xoa toan bo: ";
-    list.printList();
-
+    Example *temp = (Example *)&arr;
+    cout << "Dia chi cua bien a: " << temp->a << endl;
+    cout << "Dia chi cua bien b: " << temp->b << endl;
+    cout << "Dia chi cua bien c: " << temp->c << endl;
 
     return 0;
 }
