@@ -19,23 +19,17 @@ struct Example {
 
 uint8_t arr[12] = {0,1,2,3,4,5,6,7,8,9,10,11};
 
-int main(){
-    cout << "Hello winDev:" << endl;
+#include <cstring>
 
-    Example ex;
-    cout << "Kich thuoc cua struct Example: " << sizeof(ex) << " byte" << endl;
-    // // In ra địa chỉ của các thành viên của struct
-    // cout << "Dia chi cua bien a: " << (void*)&ex.a << endl;
-    // cout << "Dia chi cua bien b: " << (void*)&ex.c << endl;
-    // cout << "Dia chi cua bien c: " << (void*)&ex.b << endl;
+int main() {
+    char str[] = "Hello, world!";
+    char buffer[20];
 
-    Example *p_set = (Example *)(&arr[0]);
-    cout << "Dia chi cua bien a: " << hex << setw(2) << p_set->a << endl;
-    cout << "Dia chi cua bien b: " << hex << setw(4) << p_set->b << endl;
-    cout << "Dia chi cua bien c: " << hex << setw(4) << p_set->c << endl;
-    cout << "Dia chi cua bien c: " << hex << setw(8) << p_set->d << endl;
+    // Sao chép dữ liệu từ str đến buffer (chồng địa chỉ)
+    // Bạn có thể thấy chồng địa chỉ ở đây
+    memmove(str + 3, str, strlen(str) + 1);
 
-    printf("%x-%x-%x-%x\n", p_set->a, p_set->b, p_set->c, p_set->d);
+    std::cout << "Sau khi sao chép: " << str << std::endl;
 
     return 0;
 }
