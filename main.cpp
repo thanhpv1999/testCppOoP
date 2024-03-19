@@ -70,24 +70,67 @@ void partial_sum(const std::vector<int>& vec, int start, int end, int* result) {
     *result = sum;
 }
 
+class main
+{
+public:
+    main(int x){
+        std::cout << "main" << std::endl;
+    }
+
+    ~main(){
+        std::cout << "huy main" << std::endl;
+    }
+};
+
+class thanh : public main
+{
+public:
+    thanh(int x):main(x){
+        std::cout << "thanh" << std::endl;
+    }
+
+    ~thanh(){
+        std::cout << "huy thanh" << std::endl;
+    }
+};
+
+class van : public main
+{
+public:
+    van(int x):main(x){
+        std::cout << "van" << std::endl;
+    }
+};
+
+class pham : public thanh, public van
+{
+public:
+    pham(int x):thanh(x), van(x){
+        std::cout << "pham" << std::endl;
+    }
+};
+
 int main() {
-    const int size = 1000; // Giả sử mảng có 1000 phần tử
-    std::vector<int> vec(size, 1); // Khởi tạo mảng với các giá trị là 1
+    // const int size = 1000; // Giả sử mảng có 1000 phần tử
+    // std::vector<int> vec(size, 1); // Khởi tạo mảng với các giá trị là 1
 
-    int result1, result2; // Kết quả từng phần
+    // int result1, result2; // Kết quả từng phần
 
-    // Chia mảng thành 2 phần và tính tổng song song
-    std::thread t1(partial_sum, std::ref(vec), 0, size/2, &result1);
-    std::thread t2(partial_sum, std::ref(vec), size/2, size, &result2);
+    // // Chia mảng thành 2 phần và tính tổng song song
+    // std::thread t1(partial_sum, std::ref(vec), 0, size/2, &result1);
+    // std::thread t2(partial_sum, std::ref(vec), size/2, size, &result2);
 
-    // Đợi các thread hoàn thành
-    t1.join();
-    t2.join();
+    // // Đợi các thread hoàn thành
+    // t1.join();
+    // t2.join();
 
-    // Kết hợp kết quả
-    int total_sum = result1 + result2;
+    // // Kết hợp kết quả
+    // int total_sum = result1 + result2;
 
-    std::cout << "Total sum is " << total_sum << std::endl;
+    // std::cout << "Total sum is " << total_sum << std::endl;
+
+    // pham dt1(5);
+    thanh t1(5);
 
     return 0;
 }
