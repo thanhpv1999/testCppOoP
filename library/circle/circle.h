@@ -18,9 +18,6 @@ class circle : public point
         void SetRadius(float r);
         float GetRadius(void) const;
         friend ostream & operator <<(ostream &Out, const circle &c);
-        void testVirtual(uint8_t a) override{
-            cout << "Derived class show" << a << endl;
-        }
         ~circle();
 };
 

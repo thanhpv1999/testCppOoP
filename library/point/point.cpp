@@ -6,10 +6,6 @@ point::point(float a, float b)
     point::SetPoint(a,b);
 }
 
-void point::testVirtual(uint8_t a){
-    cout << "Derived class show: "<< a << endl;
-}
-
 point::~point()
 {
     cout << "delete point" << endl;

@@ -20,7 +20,6 @@ class point
         float GetY(void) const;
         friend ostream & operator <<(ostream &Out, const point &p);
         ~point();
-        virtual void testVirtual (uint8_t a);
 };
 
 #endif
