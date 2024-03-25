@@ -130,6 +130,6 @@ int main() {
     // std::cout << "Total sum is " << total_sum << std::endl;
 
     // pham dt1(5);
-    pham t1(5);
+    thanh t1(5);
 
 }
